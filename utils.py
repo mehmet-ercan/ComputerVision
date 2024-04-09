@@ -3,6 +3,26 @@ import numpy as np
 import cv2 as cv
 from sklearn.cluster import KMeans
 
+
+def image_resizer(filePath, new_width):
+	image = cv.imread(filePath)
+	height = image.shape[0]
+	width = image.shape[1]
+
+	ratio = new_width / width
+	new_height = int(height * ratio)
+
+	dimensions = (new_width, new_height)
+	new_image = cv.resize(image, dimensions, interpolation=cv.INTER_LINEAR)
+# if you see some info, uncommit below codes
+	# print("New shape:      ", new_image.shape)
+	# cv2.imshow("Resized image", new_image)
+	# cv2.waitKey(0)
+	# cv2.destroyAllWindows()
+
+	return new_image
+
+
 """
 Takes 2 lines that represented by 2 points(a 2D list)
 Returns the junction points if it exits, False otherwise
