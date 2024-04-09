@@ -32,7 +32,7 @@ c_t1 = 50
 c_t2 = c_t1 * 3
 # Parameters=================================
 # Process model image=========================
-model_img = cv.imread("./images/0.jpg")
+model_img = cv.imread("../images/0.jpg")
 model_gray = cv.cvtColor(model_img, cv.COLOR_BGR2GRAY)
 model_canny = cv.Canny(model_gray, c_t1, c_t2)
 model_lines = cv.cvtColor(model_canny, cv.COLOR_GRAY2BGR)
