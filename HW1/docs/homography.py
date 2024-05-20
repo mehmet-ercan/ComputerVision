@@ -1,5 +1,4 @@
-import cv2 as cv
-from utils import *
+from HW1.utils import *
 
 # Window adjustment==========================
 w_width = 540

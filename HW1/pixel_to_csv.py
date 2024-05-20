@@ -28,6 +28,6 @@ def main(image_path, csv_path):
     print("CSV file has been created with average RGB values.")
 
 if __name__ == "__main__":
-    image_path = "./output-part2/warped_image.jpg"  # Specify the path to your input image
-    csv_path = "output.csv"         # Specify the path to your output CSV file
+    image_path = "output-part2/warped_image.jpg"  # Specify the path to your input image
+    csv_path = "output.csv"  # Specify the path to your output CSV file
     main(image_path, csv_path)
